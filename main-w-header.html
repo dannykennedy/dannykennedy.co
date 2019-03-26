@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Forum|Montserrat|Source+Serif+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+        html {
+            height: 100%;
+            font-family: 'Source Serif Pro', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            width: 100%;
+            min-height: 100%;
+            /*            display: grid;*/
+            margin: 0px;
+        }
+        
+        .wrapper {
+            width: inherit;
+            display: grid;
+            grid-template-columns: 2fr 4fr;
+        }
+        /*        LINKS*/
+        
+        a:link {
+            text-decoration: none;
+        }
+        
+        a:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        a:active {
+            text-decoration: underline;
+        }
+        
+        .info-area {
+            grid-column-start: 1;
+            /*            background-color: #D1DDD1;*/
+            background-color: white;
+            height: auto;
+            width: 100%;
+        }
+        
+        .photo {
+            grid-area: photo;
+            grid-row-start: 0;
+            padding-left: 20%;
+            padding-right: 20%;
+            margin-top: 20px;
+            /*            background: yellow;*/
+        }
+        
+        .photo>img {
+            object-fit: cover;
+            width: 100%;
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            /*            height: 100%;*/
+        }
+        
+        .info-text {
+            grid-row-start: 2;
+            padding-left: 5%;
+            padding-right: 5%;
+            /*            text-align: justify;*/
+        }
+        
+        .name-header {
+            font-weight: 700;
+            font-size: 1.5em;
+            width: 100%;
+            text-align: center;
+        }
+        
+        #main-area {
+            height: auto;
+            display: grid;
+            grid-template-rows: 53px 1fr;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        #header-bar {
+            background-color: #EFEFEF;
+            /*            padding-left: 20px;*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 50%;
+            /*            color: black;*/
+            align-items: center;
+        }
+        
+        #projects-area {
+            /*            display: grid;*/
+            height: auto;
+            /*            grid-template-columns: 50% 50%;*/
+            /*            grid-template-rows: 50% 50%;*/
+            grid-row-gap: 10px;
+            padding-top: 10px;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+        
+        .card {
+            width: 49%;
+            height: 50%;
+            display: inline-block;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #CCC;
+            /*            margin-right: 10px;*/
+        }
+        /*
+        .card:hover {
+            height: 100%;
+        }
+*/
+        
+        .overlay {
+            width: auto;
+            height: 100%;
+            opacity: 0.5;
+            color: white;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            border-radius: inherit;
+        }
+        
+        .programming {
+            /*            background-color: #e06666;*/
+            background-color: #222;
+        }
+        
+        .writing {
+            /*            background-color: #6fa8dc;*/
+            background-color: #333
+        }
+        
+        .projects {
+            /*            background-color: #ffd966;*/
+            background-color: #444;
+        }
+        
+        .art {
+            /*            background-color: #93c47d;*/
+            background-color: #111;
+        }
+        
+        #zodiac {
+            background-image: url(zodiac.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #writing {
+            background-image: url(writing.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #art {
+            background-image: url(Sculpture_wo_logo2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #projects {
+            background-image: url(ani.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .overlay:hover {
+            opacity: 0;
+        }
+        /*DROPDOWN*/
+        
+        .dropbtn {
+            background-color: inherit;
+            font-size: 18px;
+            /*            padding: 16px;*/
+            border: none;
+            color: inherit;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            background-color: #777;
+        }
+        
+        .main-header {
+            height: 70px;
+            width: 100%;
+            background-color: #444;
+            color: white;
+            display: grid;
+            grid-template-columns: 200px 1fr 20px;
+            align-items: center;
+        }
+        
+        .menu-items {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        #site-header {
+            margin-left: 20px;
+        }
+        
+        .card2 {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 45%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .card2:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        img {
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .container {
+            padding: 2px 16px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main-header">
+        <p id="site-header">Dan Kennedy</p>
+        <div class="menu-items">
+            <div class="dropdown">
+                <button class="dropbtn"><a href="resume.html" target="_blank">Resume</a></button>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Profiles</button>
+                <div class="dropdown-content">
+                    <a href="https://www.linkedin.com/in/dan-kennedy-9a433728/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/dannykennedy" target="_blank">GitHub</a>
+                    <a href="https://www.facebook.com/kannydennedy">BookFace</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="contact.html">Contact</a></button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+
+
+        <div class="info-area">
+
+            <div class="photo">
+                <img src="dp_sml.jpg" />
+            </div>
+
+            <div class="info-text">
+                <!--
+
+                <p class="name-header">Dan Kennedy</p>
+-->
+
+                <p class="info-text"><span>
+                   
+                   There's a lot of systems in the world. Ecosystems, political systems, design systems. I've decided that I'm into 'symbolic systems'. That cuts across languages, programming, and anything that operates with symbols, signs and codes. 
+                    
+                    <span style="display: block; margin-top: 10px;">
+                    Specifically, I love full stack web development, linguistics, art, writing and a lot of languages - from German and Persian to Japanese and Kunwinjku. Oh and I also love dreams. The original symbolic system.</span>
+
+                    <span style="display: block; margin-top: 10px;">All these systems are intricate and fascinating, but in the end they exist to communicate things. The big things that are important to people. So I'm a big fan of making things, and trying to do things that are meaningful in general.</span>
+
+
+                    </span>
+
+
+                </p>
+            </div>
+        </div>
+
+
+
+        <div id="projects-area">
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <p class="genre-header">Writing projects</p>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+            <p class="genre-header">Art projects</p>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+            <div class="card2">
+                <img src="zodiac.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Zodiac design system</b></h4>
+                    <p>Interior Designer</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        function removeCards() {
+
+            let cards = document.getElementsByClassName('card');
+
+            console.log(cards);
+
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].style.display = 'none';
+            }
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
