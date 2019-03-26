@@ -4,27 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Forum|Montserrat|Source+Serif+Pro" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Forum|Montserrat|Source+Serif+Pro|Open+Sans" rel="stylesheet">
     <style>
+        :root {
+            --box-shadow-initial: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        
         html {
             height: 100%;
-            font-family: 'Source Serif Pro', 'Helvetica Neue', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 100;
+            -webkit-font-smoothing: antialiased;
         }
         
         body {
             width: 100%;
             min-height: 100%;
-            /*            display: grid;*/
             margin: 0px;
+            background-color: #EDEDEF;
         }
         
         .wrapper {
-            width: inherit;
+            width: 100%;
+            margin: auto;
             display: grid;
-            grid-template-columns: 2fr 4fr;
+            grid-template-columns: 3fr 5fr;
         }
-        /*        LINKS*/
+        /*LINKS*/
         
         a:link {
             text-decoration: none;
@@ -45,20 +51,24 @@
         }
         
         .info-area {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 20px;
             grid-column-start: 1;
-            /*            background-color: #D1DDD1;*/
             background-color: white;
             height: auto;
-            width: 100%;
+            border-radius: 5px;
+            padding-bottom: 50px;
+            box-shadow: var(--box-shadow-initial);
         }
         
         .photo {
             grid-area: photo;
             grid-row-start: 0;
-            padding-left: 20%;
-            padding-right: 20%;
             margin-top: 20px;
-            /*            background: yellow;*/
+            width: 60%;
+            margin: auto;
         }
         
         .photo>img {
@@ -66,14 +76,14 @@
             width: 100%;
             -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
-            /*            height: 100%;*/
+            margin-top: 50px;
         }
         
         .info-text {
             grid-row-start: 2;
-            padding-left: 5%;
-            padding-right: 5%;
-            /*            text-align: justify;*/
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
         }
         
         .name-header {
@@ -90,47 +100,26 @@
             font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
-        #header-bar {
-            background-color: #EFEFEF;
-            /*            padding-left: 20px;*/
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 50%;
-            /*            color: black;*/
-            align-items: center;
-        }
-        
         #projects-area {
             display: grid;
             height: auto;
             grid-template-columns: 100%;
-            /*            grid-template-rows: 50% 50%;*/
-            padding-top: 10px;
+            padding-top: 20px;
             font-weight: 700;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            width: 95%;
+            margin-left: 5px;
         }
         
         .theme-group {
+            /*            width: 95%;*/
+            margin: auto;
             display: grid;
             height: auto;
             grid-template-columns: 49% 49%;
             grid-row-gap: 10px;
             grid-column-gap: 2%;
         }
-        
-        .card {
-            width: 49%;
-            height: 50%;
-            display: inline-block;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #CCC;
-            /*            margin-right: 10px;*/
-        }
-        /*
-        .card:hover {
-            height: 100%;
-        }
-*/
         
         .overlay {
             width: auto;
@@ -143,7 +132,6 @@
             border-radius: inherit;
         }
         
-        
         .overlay:hover {
             opacity: 0;
         }
@@ -152,14 +140,16 @@
         .dropbtn {
             background-color: inherit;
             font-size: 18px;
-            /*            padding: 16px;*/
+            height: 100%;
             border: none;
             color: inherit;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
         .dropdown {
             position: relative;
             display: inline-block;
+            font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
         .dropdown-content {
@@ -198,9 +188,12 @@
             display: grid;
             grid-template-columns: 200px 1fr 20px;
             align-items: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
         }
         
         .menu-items {
+            height: 100%;
             display: flex;
             justify-content: flex-end;
         }
@@ -210,16 +203,24 @@
         }
         
         .card2 {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.2s;
             width: 100%;
             margin-bottom: 4%;
             border-radius: 5px;
             display: inline-block;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 100;
+            font-size: 0.9em;
+            background-color: white;
         }
         
         .card2:hover {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .container h4 b {
+            font-weight: 600;
         }
         
         img {
@@ -241,6 +242,10 @@
         @media (max-width: 650px) {
             .wrapper {
                 grid-template-columns: 100%;
+            }
+            #projects-area {
+                width: 90%;
+                margin: auto;
             }
         }
 
@@ -279,14 +284,11 @@
         <div class="info-area">
 
             <div class="photo">
-                <img src="images/dp_sml.jpg" />
+                <img src="images/dp_sml-2.jpg" />
             </div>
 
             <div class="info-text">
-                <!--
 
-                <p class="name-header">Dan Kennedy</p>
--->
 
                 <p class="info-text"><span>
                    
@@ -318,47 +320,34 @@
                             <img src="images/tagnostic.png" alt="Avatar" style="width:100%">
                             <div class="container">
                                 <h4><b>Tagnostic</b></h4>
-                                <p>Todo app with automated tagging</p>
+                                <p>Backend for todo app with automated NLP tagging</p>
                             </div>
                         </a>
                     </div>
 
                     <div class="card2">
-                        <a href="zodiac/index.html">
-                            <img src="images/zodiac.png" alt="Avatar" style="width:100%">
+                        <a href="http://dreamdiary.org/" target="_blank">
+                            <img src="images/dreamdiary.jpg" alt="Avatar" style="width:100%">
                             <div class="container">
-                                <h4><b>Zodiac design system</b></h4>
-                                <p>a zodiac design system</p>
+                                <h4><b>Dream Diary</b></h4>
+                                <p>Frontend concept design using custom icons, Bootstrap and chart.js</p>
                             </div>
                         </a>
                     </div>
-
-
-
-
-
-
                 </div>
+
 
                 <div class="col-2">
 
                     <div class="card2">
-                        <img src="images/zodiac.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4><b>Zodiac design system</b></h4>
-                            <p>Interior Designer</p>
-                        </div>
+                        <a href="zodiac/index.html" target="_blank">
+                            <img src="images/zodiac.png" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>Zodiac design system</b></h4>
+                                <p>Zodiac symbols generated using only HTML elements and CSS animations (with a little JS magic to sequence things).</p>
+                            </div>
+                        </a>
                     </div>
-
-                    <div class="card2">
-                        <img src="images/zodiac.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4><b>Zodiac design system</b></h4>
-                            <p>Interior Designer</p>
-                        </div>
-                    </div>
-
-
 
                 </div>
             </div>
@@ -372,6 +361,16 @@
                 <div class="col-1">
 
                     <div class="card2">
+                        <a href="https://careers.canva.com/">
+                            <img src="images/canva-careers.jpg" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>Canva careers</b></h4>
+                                <p>In 2017-18 I was the sole copywriter for careers.canva.com, writing over 40,000 words over hundreds of copy blocks, including dozens of interviews.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card2">
                         <a href="https://product.canva.com/frontend-engineering-video-typed-javascript/">
                             <img src="images/canva-product.png" alt="Avatar" style="width:100%">
                             <div class="container">
@@ -381,12 +380,57 @@
                         </a>
                     </div>
 
+                </div>
+
+                <div class="col-2">
+
                     <div class="card2">
-                        <a href="https://careers.canva.com/">
-                            <img src="images/canva-careers.jpg" alt="Avatar" style="width:100%">
+                        <a href="https://www.artlink.com.au/articles/4469/kabimbebme-it-really-pops/">
+                            <img src="images/kabimbebme.jpg" alt="Avatar" style="width:100%">
                             <div class="container">
-                                <h4><b>Canva careers</b></h4>
-                                <p>a zodiac design system</p>
+                                <h4><b>Kabimbebme - It really pops!</b></h4>
+                                <p>Article for Artlink magazine on Kunwinjku art terminology</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card2">
+                        <a href="https://www.cooeeart.com.au/gallery/artworks/artist/owen_yalandja/?sort_by_id=price_asc">
+                            <img src="images/cooee.jpg" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>Artist profiles for Cooee Gallery</b></h4>
+                                <p>In 2016-17 I wrote a series of artist profiles and articles while working for Cooee Gallery</p>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <h4>Selected art projects</h4>
+
+            <div class="theme-group">
+
+                <div class="col-1">
+
+                    <div class="card2">
+                        <a href="https://www.behance.net/gallery/60805141/West-(2011)-with-Jomakhan-Jafari" target="_blank">
+                            <img src="images/west.jpg" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>West</b></h4>
+                                <p>Hitchhiking to Broken Hill</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card2">
+                        <a href="https://www.behance.net/gallery/60421565/High-Places-(Japan-2009)" target="_blank">
+                            <img src="images/high-places.jpg" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>High Places</b></h4>
+                                <p>Photo series</p>
                             </div>
                         </a>
                     </div>
@@ -396,21 +440,23 @@
                 <div class="col-2">
 
                     <div class="card2">
-                       <a href="https://www.artlink.com.au/articles/4469/kabimbebme-it-really-pops/">
-                        <img src="images/kabimbebme.jpg" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4><b>Artlink</b></h4>
-                            <p>Article for Artlink magazine</p>
-                        </div>
+                        <a href="https://www.behance.net/gallery/60563123/Dream-Collector-(2010)" target="_blank">
+                            <img src="images/dream-collector.jpg" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>Dream Collector</b></h4>
+                                <p>Collecting dreams with a sandwich board</p>
+                            </div>
                         </a>
                     </div>
 
                     <div class="card2">
-                        <img src="images/zodiac.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4><b>Zodiac design system</b></h4>
-                            <p>Interior Designer</p>
-                        </div>
+                        <a href="https://www.behance.net/gallery/60639419/Taking-Off-(2003)" target="_blank">
+                            <img src="images/taking-off.jpg" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>Taking Off</b></h4>
+                                <p>High school sculpture major project. Ancient work but I still love it.</p>
+                            </div>
+                        </a>
                     </div>
 
 
