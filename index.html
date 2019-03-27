@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Yes this site is handmade by Dan -->
     <meta charset="UTF-8">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Forum|Montserrat|Source+Serif+Pro|Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style>
         :root {
             --box-shadow-initial: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            --main-background-color: #EDEDEF
         }
         
         html {
@@ -21,7 +24,7 @@
             width: 100%;
             min-height: 100%;
             margin: 0px;
-            background-color: #EDEDEF;
+            background-color: var(--main-background-color);
         }
         
         #wrapper {
@@ -53,14 +56,18 @@
         
         .info-area {
             width: 90%;
+            margin: 20px 5% 5% 20px;
+/*
             margin-left: 5%;
             margin-right: 5%;
             margin-top: 20px;
+*/
+            margin-bottom: 20px;
             grid-column-start: 1;
             background-color: white;
             height: 100%;
             border-radius: 5px;
-            padding-bottom: 50px;
+            padding-bottom: 10px;
             box-shadow: var(--box-shadow-initial);
         }
         
@@ -105,7 +112,7 @@
             display: grid;
             height: auto;
             grid-template-columns: 100%;
-            padding-top: 20px;
+            margin-top: 20px;
             font-weight: 700;
             font-size: 1.1em;
             width: 95%;
@@ -232,35 +239,35 @@
             padding: 2px 16px;
         }
         /*@MEDIA*/
-        /*
-        @media only screen and (max-width: 1300px) {
+        
+        @media only screen and (max-width: 1000px) {
             .theme-group {
                 grid-template-columns: 100%;
                 grid-column-gap: 0%;
             }
         }
-*/
         
-        @media (max-width: 640px) {
+        @media (max-width: 770px) {
+            /* Switch to single column layout */
             #wrapper {
                 grid-template-columns: 100%;
+                grid-template-rows: auto auto;
+                grid-row-gap: 60px;
             }
             #projects-area {
                 width: 90%;
                 margin: auto;
             }
-        }
-        /*
-        @media handheld {
-            #wrapper {
+            #site-header {
+                display: none;
+            }
+            .main-header {
                 grid-template-columns: 100%;
             }
-            #projects-area {
-                width: 90%;
-                margin: auto;
+            .menu-items {
+                justify-content: space-around;
             }
         }
-*/
 
     </style>
 </head>
@@ -497,35 +504,7 @@
 
 
     <script>
-        
-        // Change styling based on device
-        if (isMobileDevice()) {
 
-            document.getElementById('site-header').innerHTML = 'mobile!!!';
-
-            let wrapper = document.getElementById('wrapper');
-            console.log(wrapper);
-            wrapper.style.gridTemplateColumns = '100%';
-
-            let projectsArea = document.getElementById('projects-area');
-
-            projectsArea.style.width = '90%';
-            projectsArea.style.margin = 'auto';
-            
-
-            let themeGroup = document.getElementsByClassName
-            
-            if (themeGroup) {
-                 document.getElementById('site-header').innerHTML = themeGroup;
-                
-            }
-
-            themeGroup.style.gridTemplateColumns = '100%';
-            
-        } else {
-            document.getElementById('site-header').innerHTML = 'desktop!!!';
-            
-        }
 
 
 
