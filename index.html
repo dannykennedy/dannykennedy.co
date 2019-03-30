@@ -4,7 +4,7 @@
 <head>
     <!-- Handmade by Dan -->
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Dan Kennedy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="dannykennedy.css">
@@ -38,7 +38,10 @@
             </div>
 
             <div class="dropdown">
-                <button class="dropbtn"><a href="resume.html" target="_blank">Resume</a></button>
+                <button class="dropbtn" onclick="showResume()">Resume</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="hideResume()">Projects</button>
             </div>
 
         </div>
@@ -54,13 +57,13 @@
             </div>
 
             <div id="info-text">
-                
+
                 <div id="title-box">
 
-                <p id="name-header">Dan Kennedy</p>
-                
-                <p id="title-info">CS student, former arts admin, always an artist</p>
-                
+                    <p id="name-header">Dan Kennedy</p>
+
+                    <p id="title-info">CS student, former arts admin, always an artist</p>
+
                 </div>
 
                 <p><span>
@@ -68,19 +71,141 @@
                    There's a lot of systems in the world. Ecosystems, political systems, design systems. I've decided that I'm into 'symbolic systems'. That cuts across languages, programming, and anything that operates with symbols, signs and codes. 
                     
                     <span style="display: block; margin-top: 10px;">
-                    Specifically, I love full stack web development, linguistics, art, writing and a lot of languages - from German and Persian to Japanese and Kunwinjku. Oh and I also love dreams. The original symbolic system.</span>
+                    Specifically, I'm interested in full stack web development, linguistics, art, writing and a lot of languages - from German and Persian to Japanese and Kunwinjku. Oh and I also love dreams. The original symbolic system.</span>
 
-                    <span style="display: block; margin-top: 10px;">All these systems are intricate and fascinating, but in the end they exist to communicate things. The big things that are important to people. So I'm a big fan of making things, and trying to do things that are meaningful in general.</span>
+                    <span style="display: block; margin-top: 10px;">All these systems are intricate and fascinating, but not for their own sake. In the end I think they exist to communicate things, the big things that are important to people.</span>
 
                     </span>
 
                 </p>
+
             </div>
         </div>
         <!--List of projects as cards -->
         <div id="projects-area">
 
-            <div class="theme-group">
+            <div class="theme-group" id="resume" style="display: none">
+
+                <div class="col-1">
+
+                    <div class="card">
+
+                        <div class="container">
+                            <h4 class="resume-header"><b>Education</b></h4>
+                            <table>
+                                <tr>
+                                    <td class="nobreak bold">2015-19</td>
+                                    <td><span class="bold">BSc Computer Science</span>, UNSW Sydney
+                                        <br> (Completion August 2019)</td>
+                                </tr>
+                                <tr>
+                                    <td class="nobreak bold">2007-11</td>
+                                    <td><span class="bold">Bachelor of Fine Arts</span> (Hons), Sydney College of the Arts
+                                        <br><i>Sculpture, photography</i></td>
+                                </tr>
+                                <tr>
+                                    <td class="nobreak bold">2004-7</td>
+                                    <td><span class="bold">Bachelor of Arts</span>, University of Sydney
+                                        <br><i>Art History, German, Japanese</i></td>
+                                </tr>
+
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="container">
+                            <h4 class="resume-header"><b>Language experience</b></h4>
+                            <p>My personal focus is full stack web development, with:</p>
+                            <ul>
+                                <li>JavaScript, HTML, CSS, JQuery</li>
+                                <li>Node.js and Express, PHP, Flask</li>
+                                <li>React</li>
+                                <li>SQL</li>
+                            </ul>
+                            <p>I also have experience in:</p>
+                            <ul>
+                                <li>Java, C</li>
+                                <li>Scripting in Python, Perl & Bash</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-2">
+
+                    <div class="card">
+                        <div class="container">
+                            <h4 class="resume-header"><b>Work experience</b></h4>
+                            <table>
+                                <tr>
+                                    <td class="bold">Bininj Kunwok Language Project</td>
+                                    <td class="nobreak bold align-right align-top">2015-Present</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ul>
+                                            <li>UI development and design for Kundjeyhmi Android application (Java, XML, Illustrator), launching soon.</li>
+                                            <li>Development and design of first online Kunwinjku dictionary for CDU course</li>
+                                            <li>Creating dictionary entries for Kunwinjku-English dictionary</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="bold">Content Writer, Canva, Sydney</td>
+                                    <td class="nobreak bold align-right align-top">2016-Present</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ul>
+                                            <li>Sole copywriter for the rebuild of Canva's careers portal, (canva.com/careers) writing content for over 40 pages.</li>
+                                            <li>Content writing and copy editing for Product blog (product.canva.com)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Registrar, Cooee Gallery, Sydney</td>
+                                    <td class="nobreak bold align-right align-top">2015-17</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ul>
+                                            <li>Cataloguing, documentation and sales of artworks</li>
+                                            <li>Copywriting for web and print, publication design</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="bold">Art & Cultural Officer, Injalak Arts</td>
+                                    <td class="nobreak bold align-right align-top">2013-15</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <ul>
+                                            <li>Purchasing, documenting and cataloguing artworks</li>
+                                            <li>Production of interpretative cultural materials</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">Previous lives include: Tour Guide and Sculpture at Scenic World assistant, Scenic World Katoomba (2010-13), Private language tutor (English and German), Tokyo area (2009-10).</td>
+                                </tr>
+
+
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="theme-group projects">
 
                 <div class="col-1">
 
@@ -95,6 +220,17 @@
                     </div>
 
                     <div class="card">
+                        <a href="http://www.njamed.com" target="_blank">
+                            <img src="images/njamed.png" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>njamed.com</b></h4>
+                                <p>Online dictionary created for the Bininj Kunwok Regional Language Centre</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--
+                    <div class="card">
                         <a href="http://dreamdiary.org/" target="_blank">
                             <img src="images/dreamdiary.jpg" alt="Avatar" style="width:100%">
                             <div class="container">
@@ -103,6 +239,7 @@
                             </div>
                         </a>
                     </div>
+-->
                 </div>
 
 
@@ -118,11 +255,21 @@
                         </a>
                     </div>
 
+                    <div class="card">
+                        <a href="https://www.openprocessing.org/sketch/690371" target="_blank">
+                            <img src="images/dream-graph.png" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>Dream data visualisation</b></h4>
+                                <p>Visualisation of the most common elements in my dreams over a 6 year period. Written using Processing. Warning, this is first year code and it's horribly inefficient!</p>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
-            <h4>Writing</h4>
-            <div class="theme-group">
+            <h4 class="theme-group-header">Writing</h4>
+            <div class="theme-group projects">
                 <div class="col-1">
 
                     <div class="card">
@@ -170,8 +317,8 @@
                     </div>
                 </div>
             </div>
-            <h4>Selected art projects</h4>
-            <div class="theme-group">
+            <h4 class="theme-group-header">Selected art projects</h4>
+            <div class="theme-group projects">
 
                 <div class="col-1">
 
@@ -222,5 +369,42 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function showResume() {
+            document.getElementById('resume').style.display = 'grid';
+            let projects = document.getElementsByClassName('projects');
+            for (let i = 0; i < projects.length; i++) {
+                projects[i].style.display = 'none';
+            }
+            let headers = document.getElementsByClassName('theme-group-header');
+            for (let i = 0; i < headers.length; i++) {
+                headers[i].style.display = 'none';
+            }
+            console.log(document.getElementById('site-header').style);
+            console.log(window.innerWidth);
+            if (window.innerWidth < 770) {
+                document.getElementById('info-area').style.display = 'none';
+            }
+
+
+        }
+
+        function hideResume() {
+            document.getElementById('resume').style.display = 'none';
+            let projects = document.getElementsByClassName('projects');
+            for (let i = 0; i < projects.length; i++) {
+                projects[i].style.display = 'grid';
+            }
+            let headers = document.getElementsByClassName('theme-group-header');
+            for (let i = 0; i < headers.length; i++) {
+                headers[i].style.display = 'block';
+            }
+            document.getElementById('info-area').style.display = 'block';
+            console.log(window.innerWidth);
+        }
+
+    </script>
 </body>
+
 </html>
