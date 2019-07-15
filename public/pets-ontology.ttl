@@ -1,0 +1,60 @@
+@prefix ns1: <https://www.dannykennedy.co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:pets-ontologyAustralorp a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyChicken .
+
+ns1:pets-ontologyLeghorn a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyChicken .
+
+ns1:pets-ontologyPerson a <http://www.w3.org/2002/07/owl#Class> .
+
+ns1:pets-ontologyPetStore rdfs:subClassOf ns1:pets-ontologyObject .
+
+ns1:pets-ontologyPoodle a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyDog .
+
+ns1:pets-ontologyRagdoll a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyCat .
+
+ns1:pets-ontologyRover a ns1:pets-ontologyPug ;
+    ns1:pets-ontologyname "Rover"^^xsd:string .
+
+ns1:pets-ontologySiamese a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyCat .
+
+ns1:pets-ontologyname a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:pets-ontologyPet ;
+    rdfs:range xsd:string .
+
+ns1:pets-ontologyorderContains a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:domain ns1:pets-ontologyOrder ;
+    rdfs:range ns1:pets-ontologyPet .
+
+ns1:pets-ontologytag a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:pets-ontologyPet ;
+    rdfs:range xsd:string .
+
+ns1:pets-ontologyAnimal a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyObject .
+
+ns1:pets-ontologyPug a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyDog .
+
+ns1:pets-ontologyCat a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyPet .
+
+ns1:pets-ontologyChicken a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyPet .
+
+ns1:pets-ontologyDog a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyPet .
+
+ns1:pets-ontologyObject a <http://www.w3.org/2002/07/owl#Class> .
+
+ns1:pets-ontologyPet a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf ns1:pets-ontologyAnimal .
+
