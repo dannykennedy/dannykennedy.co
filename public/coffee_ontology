@@ -1,10 +1,10 @@
-@prefix ns1: <https://www.dannykennedy.co/coffee-ontology#> .
+@prefix ns1: <https://www.dannykennedy.co/coffee_ontology#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://www.dannykennedy.co/coffee-ontology#3917ecf1-4be7-478f-8934-537cb1572c25> a ns1:Order ;
+<https://www.dannykennedy.co/coffee_ontology#3917ecf1-4be7-478f-8934-537cb1572c25> a ns1:Order ;
     ns1:orderId "3917ecf1-4be7-478f-8934-537cb1572c25"^^xsd:string ;
     ns1:orderIncludesProduct ns1:almond,
         ns1:piccolo ;
@@ -13,17 +13,17 @@
     ns1:orderedBy ns1:b3eae388-e8d2-4834-8284-a170aef489f3 ;
     ns1:paymentType "mastercard"^^xsd:string .
 
-<https://www.dannykennedy.co/coffee-ontology#6r1ckl3y-8fd6-4698-o525-ff7e6f426391> a ns1:Employee ;
+<https://www.dannykennedy.co/coffee_ontology#6r1ckl3y-8fd6-4698-o525-ff7e6f426391> a ns1:Employee ;
     ns1:employeeId "6r1ckl3y-8fd6-4698-o525-ff7e6f426391"^^xsd:string ;
     ns1:employeeRole "Cashier"^^xsd:string ;
     ns1:fullName "Dan Brickley"^^xsd:string .
 
-<https://www.dannykennedy.co/coffee-ontology#7im63rnr-8fd6-4698-o525-ff7e6f426391> a ns1:Employee ;
+<https://www.dannykennedy.co/coffee_ontology#7im63rnr-8fd6-4698-o525-ff7e6f426391> a ns1:Employee ;
     ns1:employeeId "7im63rnr-8fd6-4698-o525-ff7e6f426391"^^xsd:string ;
     ns1:employeeRole "Barista"^^xsd:string ;
     ns1:fullName "Tim Berners-Lee"^^xsd:string .
 
-<https://www.dannykennedy.co/coffee-ontology#8e77ae6f-7266-4d4f-881b-639ecf741ae3> a ns1:Order ;
+<https://www.dannykennedy.co/coffee_ontology#8e77ae6f-7266-4d4f-881b-639ecf741ae3> a ns1:Order ;
     ns1:orderId "8e77ae6f-7266-4d4f-881b-639ecf741ae3"^^xsd:string ;
     ns1:orderIncludesProduct ns1:piccolo ;
     ns1:orderStatus "order-placed"^^xsd:string ;
@@ -31,12 +31,12 @@
     ns1:orderedBy ns1:b3eae388-e8d2-4834-8284-a170aef489f3 ;
     ns1:paymentType "mastercard"^^xsd:string .
 
-<https://www.dannykennedy.co/coffee-ontology#94e896e8-cb06-40cc-9765-0c351e00dbb3> a ns1:Order ;
+<https://www.dannykennedy.co/coffee_ontology#94e896e8-cb06-40cc-9765-0c351e00dbb3> a ns1:Order ;
     ns1:orderId "94e896e8-cb06-40cc-9765-0c351e00dbb3"^^xsd:string ;
     ns1:orderIncludesProduct ns1:iced_coffee ;
     ns1:orderStatus "order-placed"^^xsd:string ;
     ns1:orderTime "2019-07-20T11:45:52"^^xsd:dateTime ;
-    ns1:orderedBy <https://www.dannykennedy.co/coffee-ontology#6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792> ;
+    ns1:orderedBy <https://www.dannykennedy.co/coffee_ontology#6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792> ;
     ns1:paymentType "mastercard"^^xsd:string .
 
 ns1:a0746122-d673-49dc-8f75-fa69c0f3ab7f a ns1:Order ;
@@ -121,7 +121,7 @@ ns1:skim a ns1:Addition ;
 ns1:soy a ns1:Addition ;
     ns1:price 0.5 .
 
-<https://www.dannykennedy.co/coffee-ontology#6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792> a ns1:Customer ;
+<https://www.dannykennedy.co/coffee_ontology#6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792> a ns1:Customer ;
     ns1:customerId "6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792"^^xsd:string ;
     ns1:fullName "Mitchell Baker"^^xsd:string .
 
