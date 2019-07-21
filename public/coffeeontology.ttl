@@ -1,0 +1,170 @@
+@prefix ns1: <https://www.dannykennedy.co/coffee-ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.dannykennedy.co/coffee-ontology#3917ecf1-4be7-478f-8934-537cb1572c25> a ns1:Order ;
+    ns1:orderId "3917ecf1-4be7-478f-8934-537cb1572c25"^^xsd:string ;
+    ns1:orderIncludesProduct ns1:almond,
+        ns1:piccolo ;
+    ns1:orderStatus "order-placed"^^xsd:string ;
+    ns1:orderTime "2019-07-20T11:32:52"^^xsd:dateTime ;
+    ns1:orderedBy ns1:b3eae388-e8d2-4834-8284-a170aef489f3 ;
+    ns1:paymentType "mastercard"^^xsd:string .
+
+<https://www.dannykennedy.co/coffee-ontology#6r1ckl3y-8fd6-4698-o525-ff7e6f426391> a ns1:Employee ;
+    ns1:employeeId "6r1ckl3y-8fd6-4698-o525-ff7e6f426391"^^xsd:string ;
+    ns1:employeeRole "Cashier"^^xsd:string ;
+    ns1:fullName "Dan Brickley"^^xsd:string .
+
+<https://www.dannykennedy.co/coffee-ontology#7im63rnr-8fd6-4698-o525-ff7e6f426391> a ns1:Employee ;
+    ns1:employeeId "7im63rnr-8fd6-4698-o525-ff7e6f426391"^^xsd:string ;
+    ns1:employeeRole "Barista"^^xsd:string ;
+    ns1:fullName "Tim Berners-Lee"^^xsd:string .
+
+<https://www.dannykennedy.co/coffee-ontology#8e77ae6f-7266-4d4f-881b-639ecf741ae3> a ns1:Order ;
+    ns1:orderId "8e77ae6f-7266-4d4f-881b-639ecf741ae3"^^xsd:string ;
+    ns1:orderIncludesProduct ns1:piccolo ;
+    ns1:orderStatus "order-placed"^^xsd:string ;
+    ns1:orderTime "2019-07-21T11:32:52"^^xsd:dateTime ;
+    ns1:orderedBy ns1:b3eae388-e8d2-4834-8284-a170aef489f3 ;
+    ns1:paymentType "mastercard"^^xsd:string .
+
+<https://www.dannykennedy.co/coffee-ontology#94e896e8-cb06-40cc-9765-0c351e00dbb3> a ns1:Order ;
+    ns1:orderId "94e896e8-cb06-40cc-9765-0c351e00dbb3"^^xsd:string ;
+    ns1:orderIncludesProduct ns1:iced_coffee ;
+    ns1:orderStatus "order-placed"^^xsd:string ;
+    ns1:orderTime "2019-07-20T11:45:52"^^xsd:dateTime ;
+    ns1:orderedBy <https://www.dannykennedy.co/coffee-ontology#6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792> ;
+    ns1:paymentType "mastercard"^^xsd:string .
+
+ns1:a0746122-d673-49dc-8f75-fa69c0f3ab7f a ns1:Order ;
+    ns1:orderId "a0746122-d673-49dc-8f75-fa69c0f3ab7f"^^xsd:string ;
+    ns1:orderIncludesProduct ns1:extra-shot,
+        ns1:latte ;
+    ns1:orderStatus "order-placed"^^xsd:string ;
+    ns1:orderTime "2019-07-20T11:45:52"^^xsd:dateTime ;
+    ns1:orderedBy ns1:c1ff0fff-7fd6-4698-a525-df7e6f426395 ;
+    ns1:paymentType "mastercard"^^xsd:string .
+
+ns1:baeaa788-8fd6-4698-o525-ff7e6f426391 a ns1:Employee ;
+    ns1:employeeId "baeaa788-8fd6-4698-o525-ff7e6f426391"^^xsd:string ;
+    ns1:employeeRole "Manager"^^xsd:string ;
+    ns1:fullName "Bart Simpson"^^xsd:string .
+
+ns1:customerId a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Customer ;
+    rdfs:range xsd:string .
+
+ns1:dc6cf8d8-d054-4616-9795-8f4ae47446df a ns1:Order ;
+    ns1:orderId "94e896e8-cb06-40cc-9765-0c351e00dbb3"^^xsd:string ;
+    ns1:orderIncludesProduct ns1:cappuccino,
+        ns1:large ;
+    ns1:orderStatus "order-placed"^^xsd:string ;
+    ns1:orderTime "2019-07-22T11:32:52"^^xsd:dateTime ;
+    ns1:orderedBy ns1:b3eae388-e8d2-4834-8284-a170aef489f3 ;
+    ns1:paymentType "mastercard"^^xsd:string .
+
+ns1:decaf a ns1:Addition ;
+    ns1:price 0.5 .
+
+ns1:employeeId a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Employee ;
+    rdfs:range xsd:string .
+
+ns1:employeeRole a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Employee ;
+    rdfs:range xsd:string .
+
+ns1:espresso a ns1:Coffee ;
+    ns1:price 3.0 .
+
+ns1:flat_white a ns1:Coffee ;
+    ns1:price 4.0 .
+
+ns1:fullName a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Person ;
+    rdfs:range xsd:string .
+
+ns1:orderId a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Order ;
+    rdfs:range xsd:string .
+
+ns1:orderIncludesProduct a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:domain ns1:Order ;
+    rdfs:range ns1:Product .
+
+ns1:orderStatus a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Order ;
+    rdfs:range xsd:string .
+
+ns1:orderTime a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Order ;
+    rdfs:range xsd:dateTime .
+
+ns1:orderedBy a <http://www.w3.org/2002/07/owl#ObjectProperty> ;
+    rdfs:domain ns1:Order ;
+    rdfs:range ns1:Customer .
+
+ns1:paymentType a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Order ;
+    rdfs:range xsd:string .
+
+ns1:price a <http://www.w3.org/2002/07/owl#DatatypeProperty> ;
+    rdfs:domain ns1:Product ;
+    rdfs:range xsd:decimal .
+
+ns1:skim a ns1:Addition ;
+    ns1:price 0.5 .
+
+ns1:soy a ns1:Addition ;
+    ns1:price 0.5 .
+
+<https://www.dannykennedy.co/coffee-ontology#6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792> a ns1:Customer ;
+    ns1:customerId "6ak3rbe5-aaf8-4c5d-a1a0-af9058eb9792"^^xsd:string ;
+    ns1:fullName "Mitchell Baker"^^xsd:string .
+
+ns1:almond a ns1:Addition ;
+    ns1:price 0.5 .
+
+ns1:c1ff0fff-7fd6-4698-a525-df7e6f426395 a ns1:Customer ;
+    ns1:customerId "b3eae388-e8d2-4834-8284-a170aef489f3"^^xsd:string ;
+    ns1:fullName "Cliff Obrecht"^^xsd:string .
+
+ns1:cappuccino a ns1:Coffee ;
+    ns1:price 4.0 .
+
+ns1:extra-shot a ns1:Addition ;
+    ns1:price 0.5 .
+
+ns1:iced_coffee a ns1:Coffee ;
+    ns1:price 5.0 .
+
+ns1:large a ns1:Addition ;
+    ns1:price 0.5 .
+
+ns1:latte a ns1:Coffee ;
+    ns1:price 4.0 .
+
+ns1:piccolo a ns1:Coffee ;
+    ns1:price 4.0 .
+
+ns1:Person a <http://www.w3.org/2002/07/owl#Class> .
+
+ns1:b3eae388-e8d2-4834-8284-a170aef489f3 a ns1:Customer ;
+    ns1:customerId "b3eae388-e8d2-4834-8284-a170aef489f3"^^xsd:string ;
+    ns1:fullName "Jim Hay"^^xsd:string .
+
+ns1:Product a <http://www.w3.org/2002/07/owl#Class> .
+
+ns1:Customer rdfs:subClassOf ns1:Person .
+
+ns1:Employee rdfs:subClassOf ns1:Person .
+
+ns1:Addition rdfs:subClassOf ns1:Product .
+
+ns1:Coffee rdfs:subClassOf ns1:Product .
+
+ns1:Order a <http://www.w3.org/2002/07/owl#Class> .
+
