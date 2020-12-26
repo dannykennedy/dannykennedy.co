@@ -1,2 +1,2 @@
-# Redirect with a 301
-/yo-and-dans-holiday         https://yo-and-dans-holiday.netlify.app/              301
+# Redirects from what the browser requests to what we serve
+/yo-and-dans-holiday            https://yo-and-dans-holiday.netlify.app/
