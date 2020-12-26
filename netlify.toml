@@ -2,6 +2,6 @@
 [[redirects]]
   from = "/*"
   to = "https://dankennedy.light.garden/"
-  status = 301
+  status = 200
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
