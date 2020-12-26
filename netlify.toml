@@ -2,6 +2,14 @@
 [[redirects]]
   from = "/yo-and-dans-holiday"
   to = "https://yo-and-dans-holiday.netlify.app/"
+  status = 301
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
+
+## This rule redirects to an external API, signing requests with a secret
+[[redirects]]
+  from = "/"
+  to = "/"
   status = 200
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
