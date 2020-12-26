@@ -1,3 +1,5 @@
-# Redirects from what the browser requests to what we serve
-/yo-and-dans-holiday            https://yo-and-dans-holiday.netlify.app/  301
-/                               https://dankennedy.light.garden           200
+# Redirect with a 301
+/yo-and-dans-holiday         https://yo-and-dans-holiday.netlify.app/              301
+
+# Rewrite a path
+/ https://dankennedy.light.garden/    200
