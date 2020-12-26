@@ -8,8 +8,8 @@
 
 ## This rule redirects to an external API, signing requests with a secret
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "https://dankennedy.light.garden/"
-  status = 200
+  status = 301
   force = true # COMMENT: ensure that we always redirect
   headers = {X-From = "Netlify"}
